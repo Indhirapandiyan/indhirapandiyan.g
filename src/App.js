@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+// function App() {
+//   // javascript
+//   console.log('hello from component');
 
-function App() {
+//   return (
+//    <div>
+//     <p>Hello World</p>
+//    </div>
+//   );
+// }
+
+// export default App;
+
+import React from 'react'
+
+
+function Hello(props) {
+  // console.log(props);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>Hello {props.name}, you are {props.age} years old</p>
     </div>
-  );
+  )
 }
 
-export default App;
+function App() {
+  const age = 23;
+  return (
+    <div>
+    <h1>Greetings</h1>
+    <Hello name='priya' age={10+12}/>
+    <Hello name='pandiyan' age={age}/>
+    </div>
+    )
+}
+
+export default App
+ 
